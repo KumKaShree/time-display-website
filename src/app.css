@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply antialiased;
+        font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+    }
+
+    body {
+        @apply overflow-hidden;
+        font-feature-settings: "tnum";
+        font-variant-numeric: tabular-nums;
+    }
+
+    ::selection {
+        @apply bg-white/20 text-white;
+    }
+}
+
+/* Smooth scrolling */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+} 
